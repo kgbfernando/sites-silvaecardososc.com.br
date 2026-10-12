@@ -51,7 +51,10 @@
         '<header class="site-header">' +
         '  <div class="container site-header__inner">' +
         '    <a class="site-header__brand" href="' + pageUrl("") + '">' +
-        '      <img class="site-header__logo" src="' + assetUrl("images/logo-silva-e-cardoso-advogados.png") + '" width="1300" height="282" alt="Silva e Cardoso Advogados — página inicial">' +
+        '      <span class="brand-lockup brand-lockup--header">' +
+        '        <img class="brand-lockup__emblem" src="' + assetUrl("images/logo-emblema.webp") + '" width="480" height="480" alt="">' +
+        '        <img class="brand-lockup__wordmark" src="' + assetUrl("images/logo-silva-e-cardoso-advogados.png") + '" width="1259" height="184" alt="Silva e Cardoso Advogados e Associados — página inicial">' +
+        "      </span>" +
         "    </a>" +
         '    <button class="site-header__toggle" type="button" aria-expanded="false" aria-controls="site-nav">' +
         '      <span class="site-header__toggle-icon" aria-hidden="true"></span>' +
@@ -104,7 +107,7 @@
         '      <p class="form__note">O envio abre o WhatsApp do escritório com a sua mensagem.</p>' +
         '      <p class="form__status" role="status"></p>' +
         "    </form>" +
-        '    <img class="site-footer__logo" src="' + assetUrl("images/logo-silva-e-cardoso-advogados.png") + '" width="1300" height="282" alt="Silva e Cardoso Advogados" loading="lazy">' +
+        '    <img class="site-footer__logo" src="' + assetUrl("images/logo-silva-e-cardoso-advogados.png") + '" width="1259" height="184" alt="Silva e Cardoso Advogados e Associados" loading="lazy">' +
         '    <div class="site-footer__bottom">' +
         '      <ul class="social-links" aria-label="Redes sociais">' + socialItems + "</ul>" +
         '      <p class="site-footer__copyright">' + config.copyright + "</p>" +

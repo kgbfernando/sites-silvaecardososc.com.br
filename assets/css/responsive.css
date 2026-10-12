@@ -95,8 +95,17 @@
     min-height: 313px;
   }
 
-  .hero__logo {
-    width: 274px;
+  .brand-lockup--hero {
+    gap: 14px;
+  }
+
+  .brand-lockup--hero .brand-lockup__emblem {
+    width: 72px;
+    height: 72px;
+  }
+
+  .brand-lockup--hero .brand-lockup__wordmark {
+    width: 236px;
   }
 
   .hero__subtitle,
@@ -362,8 +371,17 @@
     padding-block: 16px;
   }
 
-  .site-header__logo {
-    width: 198px;
+  .brand-lockup--header {
+    gap: 10px;
+  }
+
+  .brand-lockup--header .brand-lockup__emblem {
+    width: 52px;
+    height: 52px;
+  }
+
+  .brand-lockup--header .brand-lockup__wordmark {
+    width: 150px;
   }
 
   .site-header__toggle {
@@ -488,7 +506,7 @@
   }
 
   .site-footer__logo {
-    width: 198px;
+    width: 192px;
     margin-top: 60px;
   }
 

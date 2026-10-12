@@ -73,7 +73,7 @@ Foram encontradas **15 páginas públicas**. Nenhuma página extra apareceu nos 
 
 ## Identidade visual (Silva e Cardoso Advogados e Associados)
 
-- O logotipo (`assets/images/logo-silva-e-cardoso-advogados.png`), a imagem de compartilhamento (`og-image.jpg`) e os favicons (`assets/icons/`) são **provisórios**: só texto, na fonte Montserrat, nas mesmas proporções do logotipo anterior. Substitua pelos arquivos oficiais do escritório mantendo os mesmos nomes (logotipo em PNG transparente, 1300×282 ou proporção semelhante).
+- Logotipo: o banner e o cabeçalho usam o emblema oficial (`assets/images/logo-emblema.webp`, extraído de `novas/logo.jpeg`, com o fundo branco removido por máscara circular suavizada e o dourado levemente dessaturado para combinar com o site) ao lado do nome em texto (`logo-silva-e-cardoso-advogados.png`). O nome em texto, a imagem de compartilhamento (`og-image.jpg`) e os favicons (`assets/icons/`) ainda são **provisórios** (texto em Montserrat).
 - A capa do artigo "Rescisão Indireta: Direitos do Trabalhador" (`assets/images/artigos/rescisao-indireta-direitos-do-trabalhador.webp`) tem o nome do escritório anterior escrito dentro da imagem e precisa ser substituída.
 - O widget de avaliações (Elfsight) exibe as avaliações do perfil no Google configurado no painel da Elfsight, que ainda é o do escritório anterior. Crie um widget para o perfil do Silva e Cardoso e troque a classe `elfsight-app-…` nas páginas.
 - O botão de localização faz uma busca por "Silva e Cardoso Advogados e Associados" no Google Maps; troque pelo link exato do endereço.

@@ -117,7 +117,8 @@ Abra o arquivo `index.html` da página desejada e altere o texto entre as tags. 
 
 | O quê | Arquivo |
 | --- | --- |
-| Logotipo (banner, cabeçalho e rodapé) | `assets/images/logo-silva-e-cardoso-advogados.png` |
+| Emblema circular (banner e cabeçalho) | `assets/images/logo-emblema.webp` (480×480, fundo transparente) |
+| Nome em texto (banner, cabeçalho e rodapé) | `assets/images/logo-silva-e-cardoso-advogados.png` |
 | Fundos escuros das seções | `assets/images/bg-predios.webp`, `bg-biblioteca.webp`, `bg-balanca.webp` (definidos em `assets/css/layout.css`) |
 | Fotos dos advogados | `assets/images/equipe-*.webp` |
 | Capas dos artigos | `assets/images/artigos/*.webp` |

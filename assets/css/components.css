@@ -108,9 +108,51 @@
   line-height: 0;
 }
 
-.hero__logo {
-  width: 810px;
+/* ---------- Logotipo: emblema + nome ----------
+   Usado no banner das páginas e no cabeçalho dos artigos. */
+
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   max-width: 100%;
+}
+
+.brand-lockup__emblem {
+  flex: none;
+  border-radius: 50%;
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.5));
+}
+
+.brand-lockup__wordmark {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.brand-lockup--hero {
+  gap: 36px;
+}
+
+.brand-lockup--hero .brand-lockup__emblem {
+  width: 176px;
+  height: 176px;
+}
+
+.brand-lockup--hero .brand-lockup__wordmark {
+  width: 600px;
+}
+
+.brand-lockup--header {
+  gap: 20px;
+}
+
+.brand-lockup--header .brand-lockup__emblem {
+  width: 100px;
+  height: 100px;
+}
+
+.brand-lockup--header .brand-lockup__wordmark {
+  width: 300px;
 }
 
 .hero__subtitle {
@@ -609,10 +651,7 @@
 .site-header__brand {
   display: block;
   margin-left: 106px;
-}
-
-.site-header__logo {
-  width: 319px;
+  text-decoration: none;
 }
 
 .site-header__toggle {
@@ -714,7 +753,7 @@
 
 .site-footer__logo {
   display: block;
-  width: 294px;
+  width: 285px;
   margin: 20px auto 0;
 }
 
