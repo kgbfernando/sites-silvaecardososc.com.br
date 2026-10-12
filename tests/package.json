@@ -1,0 +1,14 @@
+{
+  "name": "silva-e-cardoso-advogados-testes",
+  "private": true,
+  "description": "Testes automatizados do site estático (necessário apenas para desenvolvimento).",
+  "type": "module",
+  "scripts": {
+    "serve": "node server.mjs",
+    "test": "playwright test",
+    "test:report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.48.2"
+  }
+}

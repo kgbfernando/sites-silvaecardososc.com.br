@@ -1,0 +1,67 @@
+/* ==========================================================================
+   Variáveis globais do site
+   Altere aqui cores, fontes, larguras e espaçamentos usados em todas as páginas.
+   ========================================================================== */
+
+:root {
+  /* Cores principais */
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-text: #1d1e20;
+  --color-heading: #0d141a;
+  --color-muted: #56585e;
+  --color-surface-light: #eceff3;
+  --color-dark: #1d1e20;
+  --color-brown: #382e27;
+  --color-input-border: #b8c0cc;
+  --color-focus: #25d366;
+  --color-link: #1d4ed8;
+  --color-pagination-active: #673de6;
+
+  /* WhatsApp */
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #008361;
+
+  /* Sobreposição escura aplicada sobre as imagens de fundo (RGB sem alfa) */
+  --overlay-rgb: 29, 30, 32;
+
+  /* Botões */
+  --button-dark-bg: #000000;
+  --button-dark-bg-hover: #1d1e20;
+
+  /* Tipografia */
+  --font-primary: "Roboto", Arial, Helvetica, sans-serif;
+  --font-accent: "Montserrat", "Roboto", Arial, sans-serif;
+
+  --font-size-body: 16px;
+  --font-size-small: 14px;
+  --font-size-h1: 48px;
+  --font-size-section-title: 48px;
+  --font-size-team-name: 40px;
+  --font-size-article-heading: 26px;
+  --font-size-card-title: 24px;
+  --font-size-faq-question: 20px;
+  --font-size-item-title: 18px;
+
+  --line-height-heading: 1.3;
+  --line-height-body: 1.5;
+
+  /* Larguras */
+  --content-width: 1224px;
+  --article-width: 812px;
+  --article-header-width: 954px;
+  --text-narrow-width: 606px;
+  --page-gutter: 16px;
+
+  /* Bordas e sombras */
+  --radius-image: 20px;
+  --radius-button-dark: 14px;
+  --radius-pill: 999px;
+  --radius-input: 10px;
+  --shadow-floating: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  /* Animações */
+  --transition-fast: 0.2s ease;
+  --reveal-duration: 0.65s;
+  --reveal-delay: 0.1s;
+}

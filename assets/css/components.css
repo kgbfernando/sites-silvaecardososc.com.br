@@ -1,0 +1,973 @@
+/* ==========================================================================
+   Componentes reutilizáveis
+   Ordem: botões, banner, áreas, equipe, serviços, escritório, avaliações,
+   contato/formulários, perguntas frequentes, cabeçalho, rodapé, artigos,
+   botão flutuante do WhatsApp e animações.
+   ========================================================================== */
+
+/* ---------- Botões ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 8px 24px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-body);
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+/* Botão verde que abre o WhatsApp */
+.btn--whatsapp {
+  min-width: 357px;
+  min-height: 56px;
+  border-color: var(--color-white);
+  background-color: var(--color-whatsapp);
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+.btn--whatsapp:hover {
+  background-color: transparent;
+}
+
+/* Botões pretos da lista de áreas */
+.btn--dark {
+  width: 100%;
+  border-radius: var(--radius-button-dark);
+  background-color: var(--button-dark-bg);
+  color: var(--color-white);
+}
+
+.btn--dark:hover {
+  background-color: var(--button-dark-bg-hover);
+}
+
+/* Itens sem página própria no site original: aparência de botão, sem link */
+.btn--static {
+  cursor: default;
+}
+
+/* Botão com contorno (localização do escritório) */
+.btn--outline {
+  min-height: 56px;
+  padding-inline: 16px;
+  border-color: var(--color-heading);
+  background-color: transparent;
+  color: var(--color-heading);
+  font-weight: 500;
+}
+
+.btn--outline:hover {
+  background-color: rgba(13, 20, 26, 0.05);
+}
+
+/* Botão marrom de envio dos formulários */
+.btn--submit {
+  min-height: 51px;
+  padding: 16px 40px;
+  border-color: var(--color-heading);
+  border-radius: 50px;
+  background-color: var(--color-brown);
+  color: var(--color-white);
+}
+
+.btn--submit:hover {
+  background-color: #4a3d34;
+}
+
+/* ---------- Banner principal (hero) ---------- */
+
+.hero {
+  min-height: 504px;
+  padding: 100px 0 79px;
+  --overlay-opacity: 0.95;
+}
+
+.hero--area {
+  min-height: 528px;
+}
+
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero__title {
+  margin: 0;
+  line-height: 0;
+}
+
+.hero__logo {
+  width: 810px;
+  max-width: 100%;
+}
+
+.hero__subtitle {
+  max-width: 400px;
+  margin-top: 21px;
+  font-family: var(--font-accent);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.hero__cta {
+  margin-top: 49px;
+}
+
+.hero--area .hero__subtitle {
+  margin-top: 37px;
+}
+
+.hero--area .hero__cta {
+  margin-top: 32px;
+}
+
+/* ---------- Áreas de atuação / lista de tópicos ---------- */
+
+.areas {
+  padding: 80px 0 71px;
+  scroll-margin-top: 16px;
+}
+
+.areas__title {
+  color: var(--color-black);
+}
+
+.areas__lead {
+  color: var(--color-black);
+}
+
+.areas__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 498px));
+  justify-content: center;
+  gap: 22px;
+  margin: 56px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Páginas de área: lista logo abaixo do título, sem parágrafo de introdução */
+.areas__title + .areas__grid {
+  margin-top: 50px;
+}
+
+.areas__cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+/* ---------- Equipe ---------- */
+
+.team-intro {
+  min-height: 232px;
+  padding: 40px 0 48px;
+}
+
+.team-intro__lead {
+  max-width: 503px;
+  margin-top: 34px;
+}
+
+.team-member {
+  padding: 40px 0 48px;
+}
+
+.team-member--last {
+  padding-bottom: 125px;
+  --overlay-opacity: 0.94;
+}
+
+.team-member__inner {
+  display: grid;
+  grid-template-columns: 377px minmax(0, 606px);
+  grid-template-rows: auto auto;
+  column-gap: 153px;
+  padding-left: calc(var(--page-gutter) + 88px);
+}
+
+.team-member__photo {
+  position: relative;
+  isolation: isolate;
+  grid-row: 1 / span 2;
+  width: 377px;
+  height: 468px;
+  margin: 0;
+}
+
+/* Moldura decorativa deslocada atrás da foto */
+.team-member__photo::before {
+  content: "";
+  position: absolute;
+  inset: 16px -16px -16px 16px;
+  z-index: -1;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: var(--radius-image);
+}
+
+.team-member__photo-img {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-image);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.team-member__name {
+  align-self: end;
+  font-size: var(--font-size-team-name);
+  font-weight: 600;
+}
+
+.team-member__credentials {
+  display: grid;
+  gap: 16px;
+  align-self: start;
+  margin-top: 40px;
+  padding-left: 34px;
+  font-family: var(--font-accent);
+  line-height: 1.5;
+}
+
+/* ---------- Nossos serviços online ---------- */
+
+.services {
+  min-height: 770px;
+  padding: 80px 0 106px;
+}
+
+.services__title {
+  color: var(--color-text);
+}
+
+.services__lead {
+  color: var(--color-muted);
+}
+
+.services__content {
+  display: grid;
+  grid-template-columns: 506px minmax(0, 451px);
+  align-items: center;
+  column-gap: 85px;
+  margin-top: 96px;
+  padding-left: 130px;
+}
+
+.services__photo {
+  position: relative;
+  isolation: isolate;
+  width: 506px;
+  height: 420px;
+  margin: 0;
+}
+
+/* Mesma moldura deslocada das fotos da equipe, em tom escuro para o fundo claro */
+.services__photo::before {
+  content: "";
+  position: absolute;
+  inset: 16px -16px -16px 16px;
+  z-index: -1;
+  border: 1px solid rgba(13, 20, 26, 0.3);
+  border-radius: 16px;
+}
+
+.services__image {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(13, 20, 26, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(13, 20, 26, 0.18);
+  object-fit: cover;
+  object-position: center 46%;
+}
+
+.services__list {
+  display: grid;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.services__item-title {
+  color: #0d131a;
+  font-size: var(--font-size-item-title);
+  font-weight: 600;
+}
+
+.services__item-text {
+  margin-top: 9px;
+  color: var(--color-muted);
+}
+
+/* ---------- Conheça nosso escritório ---------- */
+
+.office {
+  min-height: 699px;
+  padding: 80px 0 74px;
+}
+
+.office__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 503px) minmax(0, 606px);
+  justify-content: space-between;
+  align-items: start;
+}
+
+.office__content {
+  padding-top: 99px;
+}
+
+.office__title {
+  color: var(--color-text);
+  font-size: var(--font-size-section-title);
+  text-align: left;
+}
+
+.office__text {
+  margin-top: 16px;
+  color: var(--color-muted);
+}
+
+.office__cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.office__photo {
+  position: relative;
+  isolation: isolate;
+  width: 606px;
+  height: 544px;
+  margin: 0;
+}
+
+/* Mesma moldura deslocada das outras fotos, em tom escuro para o fundo claro */
+.office__photo::before {
+  content: "";
+  position: absolute;
+  inset: 16px -16px -16px 16px;
+  z-index: -1;
+  border: 1px solid rgba(13, 20, 26, 0.3);
+  border-radius: var(--radius-image);
+}
+
+.office__image {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(13, 20, 26, 0.08);
+  border-radius: var(--radius-image);
+  box-shadow: 0 20px 40px rgba(13, 20, 26, 0.18);
+  object-fit: cover;
+  object-position: center 55%;
+}
+
+/* ---------- Avaliações (widget Elfsight / Google) ---------- */
+
+.reviews {
+  min-height: 631px;
+  padding: 19px 0 26px;
+  --overlay-opacity: 0.89;
+}
+
+.reviews__title {
+  max-width: 795px;
+  margin-inline: auto;
+}
+
+.reviews__widget {
+  max-width: 1098px;
+  min-height: 155px;
+  margin: 40px auto 0;
+}
+
+.reviews__fallback {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.reviews__fallback a {
+  color: var(--color-white);
+}
+
+/* ---------- Contato rápido e formulários ---------- */
+
+.contact {
+  min-height: 849px;
+  padding: 50px 0 80px;
+}
+
+.contact__inner {
+  position: relative;
+}
+
+.contact__intro {
+  max-width: 447px;
+  margin: 70px 0 0 56px;
+}
+
+.contact__title {
+  color: var(--color-text);
+  text-align: left;
+}
+
+.contact__text {
+  margin-top: 10px;
+  color: var(--color-muted);
+}
+
+.contact__form-card {
+  position: absolute;
+  top: 0;
+  left: 618px;
+  z-index: 1;
+  width: 591px;
+  padding: 32px;
+  border-radius: var(--radius-image);
+  background-color: var(--color-white);
+}
+
+.contact__image {
+  width: 1111px;
+  max-width: calc(100% - 57px);
+  height: 384px;
+  margin: 144px 0 0 57px;
+  border-radius: var(--radius-image);
+  object-fit: cover;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+}
+
+.form__field {
+  display: grid;
+  gap: 4px;
+}
+
+.form__label {
+  color: var(--color-heading);
+  font-size: var(--font-size-small);
+  line-height: 1.5;
+}
+
+.form__input {
+  width: 100%;
+  min-height: 53px;
+  padding: 16px;
+  border: 1px solid var(--color-input-border);
+  border-radius: var(--radius-input);
+  background-color: var(--color-white);
+  color: var(--color-heading);
+  font-size: var(--font-size-body);
+  line-height: 1.2;
+  transition: border-color var(--transition-fast);
+}
+
+.form__input:hover,
+.form__input:focus {
+  border-color: var(--color-heading);
+}
+
+.form__input::placeholder {
+  color: #6d7081;
+}
+
+.form__input[aria-invalid="true"] {
+  border-color: #d63163;
+}
+
+.form__textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+.form__error {
+  color: #d63163;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.form__error:empty {
+  display: none;
+}
+
+.form__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 7px;
+}
+
+.form__note {
+  color: var(--color-muted);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.form__status {
+  font-size: var(--font-size-small);
+  line-height: 1.4;
+}
+
+.form__status:empty {
+  display: none;
+}
+
+/* Variação escura do formulário (rodapé) */
+.form--dark .form__label {
+  color: var(--color-white);
+  font-size: var(--font-size-body);
+}
+
+.form--dark .form__note,
+.form--dark .form__status {
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+}
+
+.form--dark .form__error {
+  color: #ff9db8;
+}
+
+.form--dark .form__actions {
+  justify-content: center;
+  margin-top: -4px;
+}
+
+.form--dark .btn--submit {
+  min-width: 264px;
+  min-height: 48px;
+  font-size: var(--font-size-small);
+}
+
+/* ---------- Perguntas frequentes ---------- */
+
+.faq {
+  min-height: 706px;
+  padding: 120px 0 56px;
+}
+
+.faq__title {
+  color: var(--color-text);
+}
+
+.faq__list {
+  display: grid;
+  gap: 72px;
+  max-width: 709px;
+  margin: 78px auto 0;
+  text-align: center;
+}
+
+.faq__question {
+  margin-bottom: 16px;
+  color: var(--color-text);
+  font-size: var(--font-size-faq-question);
+  font-weight: 600;
+}
+
+.faq__answer {
+  margin: 0;
+  color: var(--color-text);
+}
+
+/* ---------- Cabeçalho das páginas de artigos ---------- */
+
+.site-header {
+  position: relative;
+  z-index: 50;
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 184px;
+}
+
+.site-header__brand {
+  display: block;
+  margin-left: 106px;
+}
+
+.site-header__logo {
+  width: 319px;
+}
+
+.site-header__toggle {
+  display: none;
+}
+
+.site-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 17px;
+  margin-right: 64px;
+  padding-top: 38px;
+}
+
+.site-nav__list {
+  display: flex;
+  gap: 46px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 130px;
+  min-height: 50px;
+  padding: 0 8px;
+  border-radius: var(--radius-pill);
+  color: var(--color-white);
+  font-size: var(--font-size-small);
+  text-decoration: none;
+  transition: background-color var(--transition-fast);
+}
+
+.site-nav__link:hover {
+  background-color: var(--button-dark-bg-hover);
+}
+
+.site-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 198px;
+  min-height: 32px;
+  padding: 4px 16px;
+  border-radius: 16px;
+  background-color: var(--color-whatsapp);
+  color: var(--color-white);
+  font-size: var(--font-size-small);
+  text-decoration: none;
+  transition: background-color var(--transition-fast);
+}
+
+.site-nav__cta:hover {
+  background-color: var(--button-dark-bg-hover);
+}
+
+/* ---------- Rodapé ---------- */
+
+.site-footer {
+  min-height: 424px;
+  padding: 14px 0 4px;
+  --overlay-opacity: 0.95;
+}
+
+.site-footer__nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 39px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer__nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 130px;
+  min-height: 50px;
+  padding: 0 8px;
+  border-radius: 7px;
+  color: var(--color-white);
+  text-decoration: none;
+  transition: background-color var(--transition-fast);
+}
+
+.site-footer__nav-link:hover {
+  background-color: var(--button-dark-bg-hover);
+}
+
+.site-footer__form {
+  max-width: 375px;
+  margin: 48px auto 0;
+}
+
+.site-footer__logo {
+  display: block;
+  width: 294px;
+  margin: 20px auto 0;
+}
+
+.site-footer__bottom {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: start;
+  margin-top: 22px;
+}
+
+.social-links {
+  display: flex;
+  gap: 21px;
+  margin: 0 0 0 40px;
+  padding: 0;
+  list-style: none;
+}
+
+.social-links__link {
+  display: block;
+  color: var(--color-white);
+}
+
+.social-links__link img {
+  width: 17px;
+  height: 17px;
+}
+
+.site-footer__copyright {
+  grid-column: 2;
+  max-width: 148px;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+/* ---------- Lista de artigos ---------- */
+
+.blog-list {
+  padding: 60px 0;
+}
+
+.blog-list__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.post-card__cover-link {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.post-card__cover {
+  width: 100%;
+  aspect-ratio: 596 / 358;
+  object-fit: cover;
+}
+
+.post-category {
+  margin-bottom: 16px;
+  font-size: var(--font-size-body);
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.post-card__title {
+  margin-bottom: 12px;
+  font-size: var(--font-size-card-title);
+  font-weight: 700;
+}
+
+.post-card__title a {
+  text-decoration: none;
+}
+
+.post-card__title a:hover {
+  text-decoration: underline;
+}
+
+.post-card__excerpt {
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.post-meta {
+  line-height: 1.3;
+}
+
+.post-meta__author {
+  margin-bottom: 4px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  margin-top: 4px;
+}
+
+.pagination[hidden] {
+  display: none;
+}
+
+.pagination__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-black);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.pagination__button[aria-current="page"] {
+  color: var(--color-pagination-active);
+  font-weight: 500;
+}
+
+.pagination__button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.pagination__button svg {
+  width: 9px;
+  height: 15px;
+}
+
+/* ---------- Página de artigo ---------- */
+
+.post-header {
+  max-width: var(--article-header-width);
+  margin-inline: auto;
+  padding: 45px 30px;
+  text-align: center;
+}
+
+.post-header__title {
+  margin-bottom: 12px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.post-header__description {
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.post-body {
+  max-width: calc(var(--article-width) + (var(--page-gutter) * 2));
+  margin-inline: auto;
+  padding: 56px var(--page-gutter) 96px;
+}
+
+.post-body__cover {
+  width: 100%;
+  aspect-ratio: 812 / 344;
+  margin-bottom: 42px;
+  object-fit: cover;
+}
+
+.post-content h2 {
+  margin: 56px 0 40px;
+  font-size: var(--font-size-article-heading);
+  font-weight: 600;
+}
+
+.post-content h2:first-child {
+  margin-top: 0;
+}
+
+.post-content p {
+  margin-bottom: 32px;
+}
+
+.post-content ul,
+.post-content ol {
+  margin-bottom: 32px;
+  padding-left: 40px;
+}
+
+.post-content li p {
+  margin-bottom: 0;
+}
+
+.post-content li p + p {
+  margin-top: 24px;
+}
+
+.post-content a {
+  color: var(--color-link);
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Botão flutuante do WhatsApp ---------- */
+
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 24px;
+  z-index: 90;
+  display: block;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  box-shadow: var(--shadow-floating);
+  transition: transform var(--transition-fast);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.06);
+}
+
+.whatsapp-float img {
+  width: 64px;
+  height: 64px;
+}
+
+/* ---------- Animações de entrada ao rolar a página ----------
+   Só são aplicadas quando o JavaScript está ativo (classe .js no <html>). */
+
+.js [data-reveal] {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: var(--reveal-duration);
+  transition-timing-function: ease;
+  transition-delay: var(--reveal-delay);
+}
+
+.js [data-reveal="slide"] {
+  transform: translateY(20%);
+}
+
+.js [data-reveal="scale"] {
+  transform: scale(0.9);
+}
+
+.js [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+}
