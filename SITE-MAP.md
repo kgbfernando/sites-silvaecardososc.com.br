@@ -31,9 +31,9 @@ Foram encontradas **15 páginas públicas**. Nenhuma página extra apareceu nos 
 
 | Integração | Situação |
 | --- | --- |
-| WhatsApp (`wa.me/…`) com as mensagens originais de cada botão | mantido; o número dos botões dentro das páginas ainda é o do original (veja as limitações) |
+| WhatsApp (`wa.me/5547999098173`) com as mensagens originais de cada botão | mantido, com o número do escritório |
 | Widget de avaliações do Google (Elfsight, app `abebf862-…`) | mantido; carregado de `static.elfsight.com` |
-| Google Maps (botão "Tenha acesso a localização…") | substituído por uma busca por "Silva e Cardoso Advogados e Associados"; troque pelo link exato do endereço do escritório |
+| Google Maps (botão "Tenha acesso a localização…") | R. Amapá, 135 – Cordeiros, Itajaí – SC |
 | Redes sociais do rodapé | mantidas como no original (veja as limitações) |
 
 ## Limitações e diferenças em relação ao original
@@ -49,7 +49,7 @@ Foram encontradas **15 páginas públicas**. Nenhuma página extra apareceu nos 
 - "Áreas de atuação" e "Entre em contato" no cabeçalho dos artigos apontavam para destinos diferentes em cada artigo (alguns sem link). Como o cabeçalho agora é compartilhado, todos levam a `/#areas-de-atuacao` e ao WhatsApp.
 
 **Redes sociais (rodapé)**
-- Facebook, Instagram, TikTok e X apontam para a página inicial de cada rede. Coloque os perfis do escritório em `assets/js/config.js`.
+- Instagram aponta para `@silvaecardoso_advogados`. Facebook, TikTok e X ainda apontam para a página inicial de cada rede; ajuste em `assets/js/config.js` ou remova os que o escritório não usa.
 
 **Menu móvel**
 - O original não tem menu "hambúrguer": no celular, o cabeçalho dos artigos mostra todos os botões empilhados, ocupando cerca de 370 px de altura. Na versão estática, o cabeçalho móvel mostra o logotipo e um botão de menu acessível por teclado, com os mesmos links. Nas páginas inicial e de área, que não têm cabeçalho no original, continua sem cabeçalho.
@@ -76,8 +76,8 @@ Foram encontradas **15 páginas públicas**. Nenhuma página extra apareceu nos 
 - Logotipo: o banner e o cabeçalho usam o emblema oficial (`assets/images/logo-emblema.webp`, extraído de `novas/logo.jpeg`, com o fundo branco removido por máscara circular suavizada e o dourado levemente dessaturado para combinar com o site) ao lado do nome em texto (`logo-silva-e-cardoso-advogados.png`). O nome em texto, a imagem de compartilhamento (`og-image.jpg`) e os favicons (`assets/icons/`) ainda são **provisórios** (texto em Montserrat).
 - A capa do artigo "Rescisão Indireta: Direitos do Trabalhador" (`assets/images/artigos/rescisao-indireta-direitos-do-trabalhador.webp`) tem o nome do escritório anterior escrito dentro da imagem e precisa ser substituída.
 - O widget de avaliações (Elfsight) exibe as avaliações do perfil no Google configurado no painel da Elfsight, que ainda é o do escritório anterior. Crie um widget para o perfil do Silva e Cardoso e troque a classe `elfsight-app-…` nas páginas.
-- O botão de localização faz uma busca por "Silva e Cardoso Advogados e Associados" no Google Maps; troque pelo link exato do endereço.
-- Equipe: as fotos e os nomes foram trocados para **Italiano** (`assets/images/equipe-italiano.webp`) e **Matheus Cardoso** (`equipe-matheus-cardoso.webp`). As duas fotos tiveram cor e brilho equalizados (balanço de branco e exposição calibrados pelo rosto e pelo fundo, que é o mesmo ambiente nas duas) e ganharam uma moldura deslocada. As **listas de formação e os números de OAB ainda são os dos advogados anteriores** e precisam ser substituídos nas 9 páginas (inicial e de área).
-- Os autores dos artigos e os números de WhatsApp dos botões dentro das páginas continuam iguais ao conteúdo de origem.
+- O botão de localização aponta para R. Amapá, 135 – Cordeiros, Itajaí – SC, 88310-500, no Google Maps.
+- Equipe: **Leandro Francisco da Silva** (`equipe-leandro-francisco-da-silva.webp`) e **Matheus Cardoso Delfino** (`equipe-matheus-cardoso-delfino.webp`), com formação e OAB atualizadas nas 9 páginas (inicial e de área). As fotos tiveram cor e brilho equalizados e ganharam moldura deslocada.
+- WhatsApp atualizado para (47) 99909-8173 em todos os botões e no `config.js`. Os autores dos artigos continuam iguais ao conteúdo de origem.
 - Seção "Nossos Serviços Online": a foto foi trocada por `assets/images/escritorio-interno.webp` (sala de atendimento), com a mesma moldura deslocada das fotos da equipe, em tom escuro. A área da foto passou de 506×360 para 506×420 no desktop, para encaixar melhor uma foto vertical.
 - Seção "Conheça nosso escritório": a foto foi trocada pela fachada do escritório (`assets/images/escritorio-fachada.webp`), com a mesma moldura escura, enquadrada na placa com o nome do escritório.

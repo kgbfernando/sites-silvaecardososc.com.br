@@ -7,7 +7,7 @@ window.SITE_CONFIG = {
   siteName: "Silva & Cardoso Advogados e Associados",
 
   // Número no formato internacional, somente dígitos (55 + DDD + número)
-  whatsappNumber: "554799999999",
+  whatsappNumber: "5547999098173",
   whatsappDefaultMessage: "Olá! Vim pelo site e gostaria de orientação jurídica.",
 
   // Endereço opcional para envio real dos formulários (ex.: Formspree, Getform,
@@ -16,7 +16,7 @@ window.SITE_CONFIG = {
 
   socialLinks: [
     { name: "Facebook", icon: "facebook.svg", url: "https://www.facebook.com/" },
-    { name: "Instagram", icon: "instagram.svg", url: "https://www.instagram.com/" },
+    { name: "Instagram", icon: "instagram.svg", url: "https://www.instagram.com/silvaecardoso_advogados?obrf=ZG1jNGh6OXV5NHk%3D&utm_source=qr" },
     { name: "TikTok", icon: "tiktok.svg", url: "https://tiktok.com/" },
     { name: "X (Twitter)", icon: "x.svg", url: "https://x.com/" }
   ],
