@@ -27,10 +27,6 @@
   /* Sobreposição escura aplicada sobre as imagens de fundo (RGB sem alfa) */
   --overlay-rgb: 29, 30, 32;
 
-  /* Botões */
-  --button-dark-bg: #000000;
-  --button-dark-bg-hover: #1d1e20;
-
   /* Tipografia */
   --font-primary: "Roboto", Arial, Helvetica, sans-serif;
   --font-accent: "Montserrat", "Roboto", Arial, sans-serif;
@@ -54,7 +50,6 @@
 
   /* Bordas e sombras */
   --radius-image: 20px;
-  --radius-button-dark: 14px;
   --radius-pill: 999px;
   --radius-input: 10px;
   --shadow-floating: 0 4px 12px rgba(0, 0, 0, 0.15);

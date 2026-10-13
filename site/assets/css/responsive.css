@@ -121,18 +121,6 @@
     line-height: 1.3;
   }
 
-  .areas__grid,
-  .areas__title + .areas__grid {
-    grid-template-columns: repeat(2, minmax(0, 130px));
-    gap: 16px 12px;
-    margin-top: 30px;
-  }
-
-  .areas__grid .btn--dark {
-    padding: 6px 8px;
-    font-size: 12px;
-  }
-
   .areas__cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
@@ -428,11 +416,6 @@
 @media (min-width: 600px) and (max-width: 920px) {
   .container {
     max-width: 560px;
-  }
-
-  .areas__grid,
-  .areas__title + .areas__grid {
-    grid-template-columns: repeat(2, minmax(0, 220px));
   }
 
   .contact__form-card {

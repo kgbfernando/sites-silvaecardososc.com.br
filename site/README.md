@@ -148,11 +148,11 @@ Quase tudo está centralizado em **`assets/css/variables.css`**:
 2. No novo `index.html`, altere `<title>`, `<meta name="description">`, `<link rel="canonical">`, as tags `og:`/`twitter:`, o bloco `application/ld+json` e o conteúdo.
 3. Crie os links para ela nas outras páginas. Exemplo: na página inicial, troque o item sem link
    ```html
-   <li data-reveal="scale"><span class="btn btn--dark btn--static">Direito de Trânsito</span></li>
+   <li class="area-card" data-reveal="scale"><div class="area-card__body"><span class="area-card__icon" aria-hidden="true"><svg …></svg></span><span class="area-card__name">Direito de Trânsito</span></div></li>
    ```
    por
    ```html
-   <li data-reveal="scale"><a class="btn btn--dark" href="direito-de-transito/">Direito de Trânsito</a></li>
+   <li class="area-card" data-reveal="scale"><a class="area-card__body area-card__body--link" href="direito-de-transito/"><span class="area-card__icon" aria-hidden="true"><svg …></svg></span><span class="area-card__name">Direito de Trânsito</span><span class="area-card__more">Saiba mais <span aria-hidden="true">→</span></span></a></li>
    ```
 4. Adicione o endereço em `sitemap.xml` e na lista `PAGES` de `tests/site.spec.mjs`.
 

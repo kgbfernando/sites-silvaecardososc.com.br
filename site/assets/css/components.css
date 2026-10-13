@@ -39,23 +39,6 @@
   background-color: transparent;
 }
 
-/* Botões pretos da lista de áreas */
-.btn--dark {
-  width: 100%;
-  border-radius: var(--radius-button-dark);
-  background-color: var(--button-dark-bg);
-  color: var(--color-white);
-}
-
-.btn--dark:hover {
-  background-color: var(--button-dark-bg-hover);
-}
-
-/* Itens sem página própria no site original: aparência de botão, sem link */
-.btn--static {
-  cursor: default;
-}
-
 /* Botão com contorno (localização do escritório) */
 .btn--outline {
   min-height: 56px;
@@ -177,33 +160,18 @@
   color: var(--color-black);
 }
 
-.areas__grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 498px));
-  justify-content: center;
-  gap: 22px;
-  margin: 56px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-/* Páginas de área: lista logo abaixo do título, sem parágrafo de introdução */
-.areas__title + .areas__grid {
-  margin-top: 50px;
-}
-
 .areas__cta {
   display: flex;
   justify-content: center;
   margin-top: 70px;
 }
 
-/* Página inicial: áreas em cartões com ícone */
-.areas--home {
+/* Áreas e tópicos em cartões com ícone (página inicial e páginas de área) */
+.areas--cards {
   background-color: var(--color-surface-light);
 }
 
-.areas--home .areas__title::after {
+.areas--cards .areas__title::after {
   content: "";
   display: block;
   width: 64px;
