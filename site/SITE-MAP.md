@@ -47,10 +47,10 @@ Foram encontradas **15 páginas públicas**. Nenhuma página extra apareceu nos 
 
 **Links que não existiam no original**
 - Nos botões "Direito de Trânsito", "Família e Sucessões", "Direito Penal", "Direito Médico", "Direito Previdenciário", "Direito Imobiliário" e "Assessoria Jurídica" (página inicial), e na maioria dos itens das listas das páginas de área, o original não tinha link nem página. Eles foram mantidos com a mesma aparência, sem link.
-- O botão "Avaliações" do rodapé não tinha destino no original. Agora ele leva à seção de avaliações da página inicial (`/#avaliacoes`).
 
 **Redes sociais (rodapé)**
-- Instagram aponta para `@silvaecardoso_advogados`. Facebook, TikTok e X ainda apontam para a página inicial de cada rede; ajuste em `assets/js/config.js` ou remova os que o escritório não usa.
+- Instagram (`@silvaecardoso_advogados`), Facebook, TikTok (`@silvaecardosoadv`) e X (`@scadvogadoass`) apontam para os perfis do escritório; ajuste em `assets/js/config.js`.
+- Os links "Áreas de atuação" e "Avaliações" do rodapé foram removidos em 13/10/2026.
 
 **Visual e conteúdo**
 - Fontes: são usados os mesmos arquivos Roboto e Montserrat servidos pelo original, agora hospedados em `assets/fonts/`.

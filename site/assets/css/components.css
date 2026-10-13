@@ -685,32 +685,6 @@
   --overlay-opacity: 0.95;
 }
 
-.site-footer__nav-list {
-  display: flex;
-  justify-content: center;
-  gap: 39px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.site-footer__nav-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 130px;
-  min-height: 50px;
-  padding: 0 8px;
-  border-radius: 7px;
-  color: var(--color-white);
-  text-decoration: none;
-  transition: background-color var(--transition-fast);
-}
-
-.site-footer__nav-link:hover {
-  background-color: var(--button-dark-bg-hover);
-}
-
 .site-footer__form {
   max-width: 375px;
   margin: 48px auto 0;

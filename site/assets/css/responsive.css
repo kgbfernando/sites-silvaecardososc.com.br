@@ -359,24 +359,6 @@
     padding: 40px 0;
   }
 
-  .site-footer__nav-list {
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .site-footer__nav-item--reviews {
-    order: 2;
-  }
-
-  .site-footer__nav-item--areas {
-    order: 3;
-  }
-
-  .site-footer__nav-link {
-    font-size: var(--font-size-small);
-  }
-
   .site-footer__form {
     margin-top: 28px;
   }

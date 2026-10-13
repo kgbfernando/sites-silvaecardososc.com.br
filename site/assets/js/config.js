@@ -15,10 +15,10 @@ window.SITE_CONFIG = {
   formEndpoint: "",
 
   socialLinks: [
-    { name: "Facebook", icon: "facebook.svg", url: "https://www.facebook.com/" },
-    { name: "Instagram", icon: "instagram.svg", url: "https://www.instagram.com/silvaecardoso_advogados?obrf=ZG1jNGh6OXV5NHk%3D&utm_source=qr" },
-    { name: "TikTok", icon: "tiktok.svg", url: "https://tiktok.com/" },
-    { name: "X (Twitter)", icon: "x.svg", url: "https://x.com/" }
+    { name: "Facebook", icon: "facebook.svg", url: "https://www.facebook.com/profile.php?id=100067928511600" },
+    { name: "Instagram", icon: "instagram.svg", url: "https://www.instagram.com/silvaecardoso_advogados/" },
+    { name: "TikTok", icon: "tiktok.svg", url: "https://www.tiktok.com/@silvaecardosoadv" },
+    { name: "X (Twitter)", icon: "x.svg", url: "https://x.com/scadvogadoass" }
   ],
 
   copyright: "© 2026 Silva & Cardoso Advogados e Associados. Todos os direitos reservados."

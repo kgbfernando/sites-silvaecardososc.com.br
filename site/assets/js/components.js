@@ -53,12 +53,6 @@
       this.innerHTML =
         '<footer class="site-footer section section--image section--bg-predios">' +
         '  <div class="container">' +
-        '    <nav aria-label="Links do rodapé">' +
-        '      <ul class="site-footer__nav-list">' +
-        '        <li class="site-footer__nav-item--areas"><a class="site-footer__nav-link" href="' + pageUrl("") + '#areas-de-atuacao">Áreas de atuação</a></li>' +
-        '        <li class="site-footer__nav-item--reviews"><a class="site-footer__nav-link" href="' + pageUrl("") + '#avaliacoes">Avaliações</a></li>' +
-        "      </ul>" +
-        "    </nav>" +
         '    <form class="form form--dark site-footer__form" data-contact-form data-form-name="Consulta pelo rodapé" novalidate>' +
         '      <div class="form__field">' +
         '        <label class="form__label" for="footer-email">Seu e-mail para contato</label>' +
