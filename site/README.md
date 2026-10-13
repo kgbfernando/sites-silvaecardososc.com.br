@@ -21,16 +21,18 @@ A lista de páginas originais, a página local correspondente a cada uma e as li
 ├── rescisao-indireta/index.html
 ├── 404.html                          ← página de "não encontrado"
 ├── robots.txt
-├── sitemap.xml
+├── sitemap.xml                       ← lista de páginas para o Google
+├── .htaccess                         ← HTTPS, sem www, 404 e cache (hospedagem Apache)
 ├── assets/
 │   ├── css/
 │   │   ├── variables.css   ← cores, fontes, larguras, bordas (comece por aqui)
 │   │   ├── base.css        ← fontes locais, reset, estilos de elementos
 │   │   ├── layout.css      ← contêiner, seções, imagens de fundo
 │   │   ├── components.css  ← botões, banner, equipe, formulários, rodapé…
-│   │   └── responsive.css  ← ajustes para tablet e celular
+│   │   ├── responsive.css  ← ajustes para tablet e celular
+│   │   └── site.min.css    ← GERADO: os 5 arquivos acima juntos e compactados (não edite)
 │   ├── js/
-│   │   ├── config.js       ← WhatsApp, redes sociais, endereço de envio dos formulários
+│   │   ├── config.js       ← WhatsApp, endereço, telefone, horário, redes sociais, envio dos formulários
 │   │   ├── components.js   ← rodapé e botão do WhatsApp compartilhados
 │   │   ├── forms.js        ← validação e envio dos formulários
 │   │   └── main.js         ← animações ao rolar
@@ -97,7 +99,7 @@ Abra o arquivo `index.html` da página desejada e altere o texto entre as tags. 
 
 - **Títulos da aba e do Google:** `<title>` e `<meta name="description">` no topo de cada arquivo. Os campos `og:` e `twitter:` controlam a prévia em redes sociais e no WhatsApp.
 - **Textos do rodapé e do botão flutuante:** `assets/js/components.js`.
-- **Número do WhatsApp, mensagem padrão, redes sociais e copyright:** `assets/js/config.js`.
+- **Número do WhatsApp, mensagem padrão, endereço/telefone/horário do rodapé, redes sociais e copyright:** `assets/js/config.js`. Mantenha nome, endereço e telefone iguais aos do perfil do escritório no Google Maps: isso conta para a busca localizada.
 - **Links de WhatsApp dentro das páginas** (botões verdes "Falar com Advogado Especialista"): estão no próprio HTML, porque cada página tem uma mensagem própria. Para trocar o número em todos, use `Ctrl+Shift+H` e substitua `5547999098173`.
 
 ---
@@ -123,6 +125,8 @@ Para otimizar imagens novas, use por exemplo <https://squoosh.app/> (WebP, quali
 ---
 
 ## 5. Como alterar cores, fontes, larguras e espaçamentos
+
+> **Importante:** as páginas carregam só `assets/css/site.min.css`, que junta e compacta os 5 arquivos CSS. Depois de editar qualquer CSS, rode `cd tests && npm run build:css`. Os testes falham se o `site.min.css` estiver desatualizado.
 
 Quase tudo está centralizado em **`assets/css/variables.css`**:
 
@@ -181,19 +185,31 @@ A pasta `tests/` não precisa ser publicada (veja a seção 8).
 
 ## 8. Como publicar em uma hospedagem estática
 
-Envie para a hospedagem **todo o conteúdo da pasta, exceto** `tests/`, `.git/`, `.gitignore`, `README.md` e `SITE-MAP.md` (estes podem ir sem problema, mas não são necessários).
+Envie para a hospedagem **todo o conteúdo da pasta, exceto** `tests/`, `novas/`, `.git/`, `.gitignore` e `README.md`. Rode `cd tests && npm run build:css` antes, se tiver editado algum CSS.
 
-- **Hospedagem tradicional (cPanel, Hostinger, Locaweb…):** envie os arquivos por FTP ou pelo gerenciador de arquivos para `public_html/`. Para usar a página 404, adicione um `.htaccess` com `ErrorDocument 404 /404.html`.
+- **Hospedagem tradicional (cPanel, Hostinger, Locaweb…):** envie os arquivos por FTP ou pelo gerenciador de arquivos para `public_html/`. O `.htaccess` incluído já usa a página 404, redireciona `http://` e `www.` para `https://silvaecardososc.com.br/` e ativa compressão e cache. Ative o certificado SSL (HTTPS) no painel antes; se a hospedagem estiver atrás de um proxy que já faz o HTTPS (ex.: Cloudflare no modo *Flexible*), o redirecionamento pode entrar em loop: nesse caso use o modo *Full* no Cloudflare.
 - **Nginx:**
   ```nginx
+  # Redireciona http:// e www. para o endereço único
   server {
+    listen 80;
+    listen 443 ssl;
+    server_name silvaecardososc.com.br www.silvaecardososc.com.br;
+    # (certificados ssl_certificate / ssl_certificate_key aqui)
+    if ($scheme = http) { return 301 https://silvaecardososc.com.br$request_uri; }
+    if ($host = www.silvaecardososc.com.br) { return 301 https://silvaecardososc.com.br$request_uri; }
+
     root /var/www/silvaecardososc;
     index index.html;
     location / { try_files $uri $uri/ =404; }
     error_page 404 /404.html;
+    location ~ ^/(tests|novas)/ { return 404; }
+    location ~* \.(css|js|webp|png|jpg|svg|woff2)$ { expires 30d; }
+    gzip on;
+    gzip_types text/css application/javascript image/svg+xml application/xml;
   }
   ```
-- **Cloudflare Pages:** crie um projeto, conecte o repositório (ou faça upload da pasta), deixe o *build command* vazio e o *output directory* como `/`. O `404.html` é usado automaticamente.
+- **Cloudflare Pages:** ative *Always Use HTTPS* e crie uma regra de redirecionamento de `www.` para o domínio sem `www`. Crie um projeto, conecte o repositório (ou faça upload da pasta), deixe o *build command* vazio e o *output directory* como `/`. O `404.html` é usado automaticamente.
 - **Amazon S3:** ative *Static website hosting* no bucket, defina `index.html` como documento de índice e `404.html` como documento de erro, e envie os arquivos (`aws s3 sync . s3://NOME-DO-BUCKET --exclude "tests/*" --exclude ".git/*"`). Use o CloudFront para HTTPS e domínio próprio.
 
 Antes de publicar no domínio definitivo:

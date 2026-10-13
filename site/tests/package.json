@@ -6,7 +6,8 @@
   "scripts": {
     "serve": "node server.mjs",
     "test": "playwright test",
-    "test:report": "playwright show-report"
+    "test:report": "playwright show-report",
+    "build:css": "node build-css.mjs"
   },
   "devDependencies": {
     "@playwright/test": "1.48.2"

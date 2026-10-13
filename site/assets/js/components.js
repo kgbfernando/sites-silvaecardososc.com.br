@@ -65,7 +65,11 @@
         '      <p class="form__note">O envio abre o WhatsApp do escritório com a sua mensagem.</p>' +
         '      <p class="form__status" role="status"></p>' +
         "    </form>" +
-        '    <img class="site-footer__logo" src="' + assetUrl("images/logo-silva-e-cardoso-advogados.png") + '" width="1259" height="184" alt="Silva e Cardoso Advogados e Associados" loading="lazy">' +
+        '    <img class="site-footer__logo" src="' + assetUrl("images/logo-silva-e-cardoso-advogados.png") + '" width="1259" height="184" alt="Silva &amp; Cardoso Advogados e Associados" loading="lazy">' +
+        '    <address class="site-footer__contact">' +
+        '      <a class="site-footer__contact-link" href="' + config.mapsUrl + '" target="_blank" rel="noopener">' + config.address + "</a><br>" +
+        '      <a class="site-footer__contact-link" href="' + config.phoneHref + '">' + config.phoneDisplay + "</a> · " + config.openingHours +
+        "    </address>" +
         '    <div class="site-footer__bottom">' +
         '      <ul class="social-links" aria-label="Redes sociais">' + socialItems + "</ul>" +
         '      <p class="site-footer__copyright">' + config.copyright + "</p>" +

@@ -10,6 +10,14 @@ window.SITE_CONFIG = {
   whatsappNumber: "5547999098173",
   whatsappDefaultMessage: "Olá! Vim pelo site e gostaria de orientação jurídica.",
 
+  // Endereço, telefone e horário exibidos no rodapé. Mantenha iguais aos do
+  // perfil do escritório no Google Maps (ajuda na busca localizada).
+  address: "R. Amapá, 135 – Cordeiros, Itajaí – SC, 88310-500",
+  mapsUrl: "https://maps.google.com/?cid=11365823739440677064",
+  phoneDisplay: "(47) 99909-8173",
+  phoneHref: "tel:+5547999098173",
+  openingHours: "Segunda a sexta, das 9h às 18h",
+
   // Endereço opcional para envio real dos formulários (ex.: Formspree, Getform,
   // Netlify Forms ou um serviço próprio). Deixe vazio para usar o WhatsApp.
   formEndpoint: "",

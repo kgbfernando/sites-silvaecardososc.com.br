@@ -1,3 +1,4 @@
+import { execFileSync } from "node:child_process";
 import { expect, test } from "@playwright/test";
 
 // Todas as páginas do site. Ao criar uma página nova, adicione-a aqui.
@@ -48,7 +49,7 @@ for (const path of PAGES) {
 
     test("tem título, descrição, canonical e um único H1", async ({ page }) => {
       await page.goto(path);
-      await expect(page).toHaveTitle(/Silva e Cardoso Advogados/);
+      await expect(page).toHaveTitle(/Silva & Cardoso/);
       await expect(page.locator('meta[name="description"]')).toHaveAttribute("content", /.{40,}/);
       await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", /^https:\/\/silvaecardososc\.com\.br\//);
       await expect(page.locator("h1")).toHaveCount(1);
@@ -127,4 +128,8 @@ test("endereço inexistente mostra a página 404", async ({ page }) => {
   const response = await page.goto("/pagina-que-nao-existe/");
   expect(response.status()).toBe(404);
   await expect(page.locator("h1")).toHaveText("Página não encontrada.");
+});
+
+test("assets/css/site.min.css está atualizado com os arquivos CSS", () => {
+  execFileSync("node", [new URL("./build-css.mjs", import.meta.url).pathname, "--check"], { stdio: "pipe" });
 });
