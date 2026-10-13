@@ -34,7 +34,7 @@ Foram encontradas **15 páginas públicas**. Nenhuma página extra apareceu nos 
 | Integração | Situação |
 | --- | --- |
 | WhatsApp (`wa.me/5547999098173`) com as mensagens originais de cada botão | mantido, com o número do escritório |
-| Widget de avaliações do Google (Elfsight, app `abebf862-…`) | mantido; carregado de `static.elfsight.com` |
+| Widget de avaliações do Google (Elfsight) | removido em 13/10/2026; substituído por avaliações fixas (veja abaixo) |
 | Google Maps (botão "Tenha acesso a localização…") | R. Amapá, 135 – Cordeiros, Itajaí – SC |
 | Redes sociais do rodapé | mantidas como no original (veja as limitações) |
 
@@ -77,7 +77,7 @@ Foram encontradas **15 páginas públicas**. Nenhuma página extra apareceu nos 
 
 - Logotipo: o banner e o cabeçalho usam o emblema oficial (`assets/images/logo-emblema.webp`, extraído de `novas/logo.jpeg`, com o fundo branco removido por máscara circular suavizada e o dourado levemente dessaturado para combinar com o site) ao lado do nome em texto (`logo-silva-e-cardoso-advogados.png`). O nome em texto, a imagem de compartilhamento (`og-image.jpg`) e os favicons (`assets/icons/`) ainda são **provisórios** (texto em Montserrat).
 - A capa do artigo "Rescisão Indireta: Direitos do Trabalhador" (`assets/images/artigos/rescisao-indireta-direitos-do-trabalhador.webp`) tem o nome do escritório anterior escrito dentro da imagem e precisa ser substituída.
-- O widget de avaliações (Elfsight) exibe as avaliações do perfil no Google configurado no painel da Elfsight, que ainda é o do escritório anterior. Crie um widget para o perfil do Silva e Cardoso e troque a classe `elfsight-app-…` nas páginas.
+- Avaliações: o widget da Elfsight (que mostrava o perfil do escritório anterior) foi trocado por 5 avaliações fixas, copiadas em 13/10/2026 do perfil "Silva & Cardoso Advogados e Associados" no Google Maps (nota 5,0). O Google, sem login, só mostra 5 avaliações com texto; as demais podem ser acrescentadas à mão. O bloco está repetido nas 9 páginas (inicial e de área): ao atualizar a nota ou os textos, altere todas.
 - O botão de localização aponta para R. Amapá, 135 – Cordeiros, Itajaí – SC, 88310-500, no Google Maps.
 - Equipe: **Leandro Francisco da Silva** (`equipe-leandro-francisco-da-silva.webp`) e **Matheus Cardoso Delfino** (`equipe-matheus-cardoso-delfino.webp`), com formação e OAB atualizadas nas 9 páginas (inicial e de área). As fotos tiveram cor e brilho equalizados e ganharam moldura deslocada.
 - A página `/artigos-juridicos/` e os links "Nossos artigos" (cabeçalho) e "Artigos" (rodapé) foram removidos em 13/10/2026.

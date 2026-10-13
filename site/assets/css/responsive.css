@@ -299,8 +299,15 @@
     padding: 50px 0 40px;
   }
 
-  .reviews__widget {
-    margin-top: 34px;
+  .reviews__list {
+    gap: 16px;
+    margin-top: 28px;
+  }
+
+  .review-card {
+    flex-basis: 100%;
+    min-width: 0;
+    padding: 20px;
   }
 
   /* Contato */

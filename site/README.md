@@ -102,7 +102,7 @@ Abra o arquivo `index.html` da página desejada e altere o texto entre as tags. 
 - **Títulos da aba e do Google:** `<title>` e `<meta name="description">` no topo de cada arquivo. Os campos `og:` e `twitter:` controlam a prévia em redes sociais e no WhatsApp.
 - **Textos do rodapé, do cabeçalho dos artigos e do botão flutuante:** `assets/js/components.js`.
 - **Número do WhatsApp, mensagem padrão, redes sociais e copyright:** `assets/js/config.js`.
-- **Links de WhatsApp dentro das páginas** (botões verdes "Falar com Advogado Especialista"): estão no próprio HTML, porque cada página tem uma mensagem própria. Para trocar o número em todos, use `Ctrl+Shift+H` e substitua `5547997184641`.
+- **Links de WhatsApp dentro das páginas** (botões verdes "Falar com Advogado Especialista"): estão no próprio HTML, porque cada página tem uma mensagem própria. Para trocar o número em todos, use `Ctrl+Shift+H` e substitua `5547999098173`.
 - **Artigos:** o texto fica dentro de `<div class="post-content">` no `index.html` do artigo. Use `<h2>` para subtítulos, `<p>` para parágrafos e `<ul><li>` para listas.
 
 ---
