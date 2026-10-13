@@ -11,7 +11,6 @@ const PAGES = [
   "/justa-causa/",
   "/periculosidade/",
   "/rescisao-indireta/",
-  "/artigos-juridicos/",
   "/rescisao-trabalhador/",
   "/auxilio-acidente/",
   "/medicamentos-sus/",
@@ -106,7 +105,7 @@ for (const path of PAGES) {
 
 test("menu móvel abre e fecha pelo teclado", async ({ page, isMobile }) => {
   test.skip(!isMobile, "menu móvel existe apenas no celular");
-  await page.goto("/artigos-juridicos/");
+  await page.goto("/rescisao-trabalhador/");
   const toggle = page.locator(".site-header__toggle");
   const nav = page.locator("#site-nav");
   await expect(nav).toBeHidden();
@@ -143,16 +142,6 @@ test("formulário de contato valida campos e abre o WhatsApp com a mensagem", as
   expect(popupUrl).toContain("Maria Teste");
   expect(popupUrl).toContain("maria@exemplo.com");
   await expect(form.locator(".form__status")).toContainText("WhatsApp");
-});
-
-test("lista de artigos mostra 4 por página e permite ir para a página 2", async ({ page }) => {
-  await page.goto("/artigos-juridicos/");
-  const cards = page.locator(".post-card");
-  await expect(cards).toHaveCount(5);
-  await expect(page.locator(".post-card:visible")).toHaveCount(4);
-  await page.getByRole("button", { name: "Página 2" }).click();
-  await expect(page.locator(".post-card:visible")).toHaveCount(1);
-  await expect(page.locator(".post-card:visible h2")).toContainText("Pejotização");
 });
 
 test("endereço inexistente mostra a página 404", async ({ page }) => {

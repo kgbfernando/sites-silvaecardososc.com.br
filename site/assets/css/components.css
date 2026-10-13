@@ -30,7 +30,7 @@
   min-width: 357px;
   min-height: 56px;
   border-color: var(--color-white);
-  background-color: var(--color-whatsapp);
+  background-color: var(--color-whatsapp-dark);
   color: var(--color-white);
   font-weight: 500;
 }

@@ -19,7 +19,6 @@ A lista de páginas originais, a página local correspondente a cada uma e as li
 ├── justa-causa/index.html
 ├── periculosidade/index.html
 ├── rescisao-indireta/index.html
-├── artigos-juridicos/index.html      ← lista de artigos
 ├── <slug-do-artigo>/index.html       ← um artigo por pasta (5 artigos)
 ├── 404.html                          ← página de "não encontrado"
 ├── robots.txt
@@ -119,7 +118,7 @@ Abra o arquivo `index.html` da página desejada e altere o texto entre as tags. 
 | --- | --- |
 | Emblema circular (banner e cabeçalho) | `assets/images/logo-emblema.webp` (480×480, fundo transparente) |
 | Nome em texto (banner, cabeçalho e rodapé) | `assets/images/logo-silva-e-cardoso-advogados.png` |
-| Fundos escuros das seções | `assets/images/bg-predios.webp`, `bg-biblioteca.webp`, `bg-balanca.webp` (definidos em `assets/css/layout.css`) |
+| Fundos escuros das seções | `assets/images/bg-predios.webp`, `bg-biblioteca.webp`, `bg-balanca.webp` (definidos em `assets/css/layout.css`); fotos em domínio público (CC0) do rawpixel |
 | Fotos dos advogados | `assets/images/equipe-*.webp` |
 | Capas dos artigos | `assets/images/artigos/*.webp` |
 | Imagem de compartilhamento (redes sociais) | `assets/images/og-image.jpg` (1440×756) |
@@ -161,7 +160,7 @@ Quase tudo está centralizado em **`assets/css/variables.css`**:
    ```html
    <li data-reveal="scale"><a class="btn btn--dark" href="direito-de-transito/">Direito de Trânsito</a></li>
    ```
-4. Para um **novo artigo**, adicione também um cartão (`<li class="post-card">…</li>`) em `artigos-juridicos/index.html`, no início da lista. A paginação (4 por página) é automática.
+4. A página de lista de artigos (`/artigos-juridicos/`) foi removida a pedido do escritório, junto com os links do menu e do rodapé. Os artigos continuam publicados nos próprios endereços, mas não aparecem mais na navegação.
 5. Adicione o endereço em `sitemap.xml` e na lista `PAGES` de `tests/site.spec.mjs`.
 
 Páginas novas na raiz usam caminhos que começam com `../` (`../assets/...`). Páginas em níveis mais profundos precisam de `../../`.
@@ -181,7 +180,7 @@ npx playwright install chromium   # apenas na primeira vez
 npm test
 ```
 
-Os testes abrem todas as páginas em desktop e celular e verificam: erros de JavaScript, arquivos faltando (HTTP 404), título/descrição/canonical/H1, imagens quebradas e sem `alt`, rolagem horizontal indevida, links internos e âncoras, menu móvel por teclado, validação e envio do formulário de contato, paginação dos artigos e a página 404. O relatório detalhado fica disponível com `npm run test:report`.
+Os testes abrem todas as páginas em desktop e celular e verificam: erros de JavaScript, arquivos faltando (HTTP 404), título/descrição/canonical/H1, imagens quebradas e sem `alt`, rolagem horizontal indevida, links internos e âncoras, menu móvel por teclado, validação e envio do formulário de contato, e a página 404. O relatório detalhado fica disponível com `npm run test:report`.
 
 A pasta `tests/` não precisa ser publicada (veja a seção 8).
 

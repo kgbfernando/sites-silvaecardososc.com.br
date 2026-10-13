@@ -17,7 +17,7 @@ Foram encontradas **15 páginas públicas**. Nenhuma página extra apareceu nos 
 | 7 | `/justa-causa` | `justa-causa/index.html` | `/justa-causa/` |
 | 8 | `/periculosidade` | `periculosidade/index.html` | `/periculosidade/` |
 | 9 | `/rescisao-indireta` | `rescisao-indireta/index.html` | `/rescisao-indireta/` |
-| 10 | `/artigos-juridicos` | `artigos-juridicos/index.html` | `/artigos-juridicos/` |
+| 10 | `/artigos-juridicos` | — (removida) | — |
 | 11 | `/rescisao-indireta-direitos-do-trabalhador` | `rescisao-trabalhador/index.html` | `/rescisao-trabalhador/` |
 | 12 | `/auxilio-acidente-o-que-e-quem-tem-direito-e-como-garantir-esse-beneficio-do-inss` | `auxilio-acidente/index.html` | `/auxilio-acidente/` |
 | 13 | `/mudancas-significativas-na-forma-como-as-demandas-judiciais-sobre-fornecimento-de-medicamentos-nao-incorporados-ao-sus-serao-processadas` | `medicamentos-sus/index.html` | `/medicamentos-sus/` |
@@ -80,6 +80,8 @@ Foram encontradas **15 páginas públicas**. Nenhuma página extra apareceu nos 
 - O widget de avaliações (Elfsight) exibe as avaliações do perfil no Google configurado no painel da Elfsight, que ainda é o do escritório anterior. Crie um widget para o perfil do Silva e Cardoso e troque a classe `elfsight-app-…` nas páginas.
 - O botão de localização aponta para R. Amapá, 135 – Cordeiros, Itajaí – SC, 88310-500, no Google Maps.
 - Equipe: **Leandro Francisco da Silva** (`equipe-leandro-francisco-da-silva.webp`) e **Matheus Cardoso Delfino** (`equipe-matheus-cardoso-delfino.webp`), com formação e OAB atualizadas nas 9 páginas (inicial e de área). As fotos tiveram cor e brilho equalizados e ganharam moldura deslocada.
+- A página `/artigos-juridicos/` e os links "Nossos artigos" (cabeçalho) e "Artigos" (rodapé) foram removidos em 13/10/2026.
+- Fundos das seções (`bg-predios`, `bg-biblioteca`, `bg-balanca`) e a foto do "Contato Rápido" (`escritorio-fachada-noite.webp`) foram trocados em 13/10/2026 por fotos semelhantes em domínio público (CC0, rawpixel). Os botões "Falar com Advogado Especialista" passaram a usar o verde escuro do botão flutuante do WhatsApp (`--color-whatsapp-dark`, #008361).
 - WhatsApp atualizado para (47) 99909-8173 em todos os botões e no `config.js`. Os autores dos artigos continuam iguais ao conteúdo de origem.
 - Seção "Nossos Serviços Online": a foto foi trocada por `assets/images/escritorio-interno.webp` (sala de atendimento), com a mesma moldura deslocada das fotos da equipe, em tom escuro. A área da foto passou de 506×360 para 506×420 no desktop, para encaixar melhor uma foto vertical.
 - Seção "Conheça nosso escritório": a foto foi trocada pela fachada do escritório (`assets/images/escritorio-fachada.webp`), com a mesma moldura escura, enquadrada na placa com o nome do escritório.

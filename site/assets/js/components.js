@@ -64,7 +64,6 @@
         '      <ul class="site-nav__list">' +
         '        <li><a class="site-nav__link" href="' + pageUrl("") + '"' + currentAttr("inicio") + ">Início</a></li>" +
         '        <li><a class="site-nav__link" href="' + pageUrl("") + '#areas-de-atuacao">Áreas de atuação</a></li>' +
-        '        <li><a class="site-nav__link" href="' + pageUrl("artigos-juridicos/") + '"' + currentAttr("artigos") + ">Nossos artigos</a></li>" +
         "      </ul>" +
         '      <a class="site-nav__cta" href="' + whatsappUrl() + '" target="_blank" rel="noopener">Entre em contato</a>' +
         "    </nav>" +
@@ -90,7 +89,6 @@
         '  <div class="container">' +
         '    <nav aria-label="Links do rodapé">' +
         '      <ul class="site-footer__nav-list">' +
-        '        <li><a class="site-footer__nav-link" href="' + pageUrl("artigos-juridicos/") + '">Artigos</a></li>' +
         '        <li class="site-footer__nav-item--areas"><a class="site-footer__nav-link" href="' + pageUrl("") + '#areas-de-atuacao">Áreas de atuação</a></li>' +
         '        <li class="site-footer__nav-item--reviews"><a class="site-footer__nav-link" href="' + pageUrl("") + '#avaliacoes">Avaliações</a></li>' +
         "      </ul>" +
