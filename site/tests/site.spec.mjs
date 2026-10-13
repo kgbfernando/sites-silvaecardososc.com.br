@@ -10,16 +10,11 @@ const PAGES = [
   "/insalubridade/",
   "/justa-causa/",
   "/periculosidade/",
-  "/rescisao-indireta/",
-  "/rescisao-trabalhador/",
-  "/auxilio-acidente/",
-  "/medicamentos-sus/",
-  "/horas-de-sobreaviso/",
-  "/stf-pejotizacao/"
+  "/rescisao-indireta/"
 ];
 
-// O widget de avaliações (Elfsight) é um serviço externo; erros dele não são do site.
-const isThirdParty = (text) => /elfsight|google|gstatic/i.test(text);
+// Serviços externos do Google (mapa e fontes); erros deles não são do site.
+const isThirdParty = (text) => /google|gstatic/i.test(text);
 
 async function scrollThrough(page) {
   await page.evaluate(async () => {
@@ -102,22 +97,6 @@ for (const path of PAGES) {
     });
   });
 }
-
-test("menu móvel abre e fecha pelo teclado", async ({ page, isMobile }) => {
-  test.skip(!isMobile, "menu móvel existe apenas no celular");
-  await page.goto("/rescisao-trabalhador/");
-  const toggle = page.locator(".site-header__toggle");
-  const nav = page.locator("#site-nav");
-  await expect(nav).toBeHidden();
-  await toggle.focus();
-  await page.keyboard.press("Enter");
-  await expect(toggle).toHaveAttribute("aria-expanded", "true");
-  await expect(nav).toBeVisible();
-  await page.keyboard.press("Escape");
-  await expect(toggle).toHaveAttribute("aria-expanded", "false");
-  await expect(nav).toBeHidden();
-  await expect(toggle).toBeFocused();
-});
 
 test("formulário de contato valida campos e abre o WhatsApp com a mensagem", async ({ page, context }) => {
   await page.goto("/");

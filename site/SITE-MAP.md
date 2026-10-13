@@ -18,14 +18,14 @@ Foram encontradas **15 páginas públicas**. Nenhuma página extra apareceu nos 
 | 8 | `/periculosidade` | `periculosidade/index.html` | `/periculosidade/` |
 | 9 | `/rescisao-indireta` | `rescisao-indireta/index.html` | `/rescisao-indireta/` |
 | 10 | `/artigos-juridicos` | — (removida) | — |
-| 11 | `/rescisao-indireta-direitos-do-trabalhador` | `rescisao-trabalhador/index.html` | `/rescisao-trabalhador/` |
-| 12 | `/auxilio-acidente-o-que-e-quem-tem-direito-e-como-garantir-esse-beneficio-do-inss` | `auxilio-acidente/index.html` | `/auxilio-acidente/` |
-| 13 | `/mudancas-significativas-na-forma-como-as-demandas-judiciais-sobre-fornecimento-de-medicamentos-nao-incorporados-ao-sus-serao-processadas` | `medicamentos-sus/index.html` | `/medicamentos-sus/` |
-| 14 | `/plantao-por-celular-da-direito-a-horas-de-sobreaviso-entenda-seus-direitos-trabalhistas` | `horas-de-sobreaviso/index.html` | `/horas-de-sobreaviso/` |
-| 15 | `/stf-suspende-processos-sobre-pejotizacao-entenda-os-impactos-da-decisao` | `stf-pejotizacao/index.html` | `/stf-pejotizacao/` |
+| 11 | `/rescisao-indireta-direitos-do-trabalhador` | — (removida) | — |
+| 12 | `/auxilio-acidente-o-que-e-quem-tem-direito-e-como-garantir-esse-beneficio-do-inss` | — (removida) | — |
+| 13 | `/mudancas-significativas-na-forma-como-as-demandas-judiciais-sobre-fornecimento-de-medicamentos-nao-incorporados-ao-sus-serao-processadas` | — (removida) | — |
+| 14 | `/plantao-por-celular-da-direito-a-horas-de-sobreaviso-entenda-seus-direitos-trabalhistas` | — (removida) | — |
+| 15 | `/stf-suspende-processos-sobre-pejotizacao-entenda-os-impactos-da-decisao` | — (removida) | — |
 | — | (não existia) | `404.html` | exibida em endereços inexistentes |
 
-**Endereços dos artigos:** as pastas dos 5 artigos foram encurtadas para no máximo 20 caracteres (linhas 11 a 15), então esses endereços são diferentes dos originais. Se o site antigo estiver indexado no Google com os endereços longos, configure redirecionamentos 301 na hospedagem (por exemplo, um arquivo `_redirects` no Cloudflare Pages ou `Redirect 301` no `.htaccess`).
+**Artigos removidos:** a lista de artigos e os 5 artigos (linhas 10 a 15) eram do escritório anterior e foram removidos em 13/10/2026, junto com o cabeçalho preto com menu que só existia nessas páginas. Se esses endereços estiverem indexados no Google, eles passam a mostrar a página 404; se quiser, configure redirecionamentos 301 para a página inicial na hospedagem (por exemplo, um arquivo `_redirects` no Cloudflare Pages ou `Redirect 301` no `.htaccess`).
 
 **Endereços:** a versão estática usa a barra no final (`/horas-extras/`). Apache, Nginx (`try_files $uri $uri/`), Cloudflare Pages e S3 redirecionam automaticamente `/horas-extras` para `/horas-extras/`, então links antigos e resultados do Google continuam funcionando. O `canonical` e o `sitemap.xml` já usam o formato novo.
 
@@ -48,27 +48,22 @@ Foram encontradas **15 páginas públicas**. Nenhuma página extra apareceu nos 
 **Links que não existiam no original**
 - Nos botões "Direito de Trânsito", "Família e Sucessões", "Direito Penal", "Direito Médico", "Direito Previdenciário", "Direito Imobiliário" e "Assessoria Jurídica" (página inicial), e na maioria dos itens das listas das páginas de área, o original não tinha link nem página. Eles foram mantidos com a mesma aparência, sem link.
 - O botão "Avaliações" do rodapé não tinha destino no original. Agora ele leva à seção de avaliações da página inicial (`/#avaliacoes`).
-- "Áreas de atuação" e "Entre em contato" no cabeçalho dos artigos apontavam para destinos diferentes em cada artigo (alguns sem link). Como o cabeçalho agora é compartilhado, todos levam a `/#areas-de-atuacao` e ao WhatsApp.
 
 **Redes sociais (rodapé)**
 - Instagram aponta para `@silvaecardoso_advogados`. Facebook, TikTok e X ainda apontam para a página inicial de cada rede; ajuste em `assets/js/config.js` ou remova os que o escritório não usa.
-
-**Menu móvel**
-- O original não tem menu "hambúrguer": no celular, o cabeçalho dos artigos mostra todos os botões empilhados, ocupando cerca de 370 px de altura. Na versão estática, o cabeçalho móvel mostra o logotipo e um botão de menu acessível por teclado, com os mesmos links. Nas páginas inicial e de área, que não têm cabeçalho no original, continua sem cabeçalho.
 
 **Visual e conteúdo**
 - Fontes: são usados os mesmos arquivos Roboto e Montserrat servidos pelo original, agora hospedados em `assets/fonts/`.
 - Tamanhos de fonte muito pequenos no celular (10 px nos botões e textos de "Nossos Serviços Online") foram aumentados para 12 px, por legibilidade.
 - Um caractere de aspas (`"`) solto sobre a foto do edifício, na seção "Conheça nosso escritório", foi omitido. Parece ser um resto do modelo, quase invisível.
 - A hierarquia de títulos foi corrigida para SEO e acessibilidade, sem mudar o texto: um único H1 por página (o logotipo na inicial, a pergunta do banner nas páginas de área, o título nos artigos), H2 para seções e H3 para itens. No original os títulos usavam níveis aleatórios (H1 no meio da página, subtítulos de artigos em H5).
-- Datas dos artigos: mantido o formato do original (`1/30/2026 · 4 min read`). No original, duas datas apareciam com um dia a menos por causa de fuso horário (5/4/2025 e 5/1/2025). Aqui são exibidas as datas cadastradas: 5/5/2025 e 5/2/2025.
 - Os textos alternativos (`alt`) das imagens estavam vazios no original. Foram escritas descrições objetivas para as fotos (nomes dos advogados, sala de espera, fachada do edifício). As imagens decorativas e as capas dos artigos ficaram com `alt=""`.
 - As animações de entrada (deslizar e aumentar com esmaecimento, 0,65 s) foram reproduzidas. Elas são desativadas para quem configurou o sistema para reduzir movimento.
 - A imagem de fundo fixa (efeito parallax) das seções da equipe é desativada em telas de toque, onde o navegador não a suporta bem.
 
 **SEO**
 - As 8 páginas de área têm, no original, o mesmo título e a mesma descrição ("Direito do Trabalho - Silva e Cardoso Advogados e Associados"). Isso foi preservado para não inventar conteúdo, mas vale escrever um título e uma descrição próprios para cada uma.
-- O Google Tag Manager do original (`GTM-N2LDKNT8`) não foi incluído; veja o README.
+- O Google Tag Manager do original não foi incluído; veja o README.
 - A imagem de compartilhamento (`og:image`) passou a ser servida pelo próprio site (`assets/images/og-image.jpg`).
 
 **Recursos não recuperados:** nenhum. Todas as imagens e as fontes foram baixadas do CDN do original, convertidas para WebP quando aplicável e redimensionadas sem perda visível.
@@ -76,12 +71,11 @@ Foram encontradas **15 páginas públicas**. Nenhuma página extra apareceu nos 
 ## Identidade visual (Silva e Cardoso Advogados e Associados)
 
 - Logotipo: o banner e o cabeçalho usam o emblema oficial (`assets/images/logo-emblema.webp`, extraído de `novas/logo.jpeg`, com o fundo branco removido por máscara circular suavizada e o dourado levemente dessaturado para combinar com o site) ao lado do nome em texto (`logo-silva-e-cardoso-advogados.png`). O nome em texto, a imagem de compartilhamento (`og-image.jpg`) e os favicons (`assets/icons/`) ainda são **provisórios** (texto em Montserrat).
-- A capa do artigo "Rescisão Indireta: Direitos do Trabalhador" (`assets/images/artigos/rescisao-indireta-direitos-do-trabalhador.webp`) tem o nome do escritório anterior escrito dentro da imagem e precisa ser substituída.
 - Avaliações: o widget da Elfsight (que mostrava o perfil do escritório anterior) foi trocado por 5 avaliações fixas, copiadas em 13/10/2026 do perfil "Silva & Cardoso Advogados e Associados" no Google Maps (nota 5,0). O Google, sem login, só mostra 5 avaliações com texto; as demais podem ser acrescentadas à mão. O bloco está repetido nas 9 páginas (inicial e de área): ao atualizar a nota ou os textos, altere todas.
 - O botão de localização aponta para R. Amapá, 135 – Cordeiros, Itajaí – SC, 88310-500, no Google Maps.
 - Equipe: **Leandro Francisco da Silva** (`equipe-leandro-francisco-da-silva.webp`) e **Matheus Cardoso Delfino** (`equipe-matheus-cardoso-delfino.webp`), com formação e OAB atualizadas nas 9 páginas (inicial e de área). As fotos tiveram cor e brilho equalizados e ganharam moldura deslocada.
-- A página `/artigos-juridicos/` e os links "Nossos artigos" (cabeçalho) e "Artigos" (rodapé) foram removidos em 13/10/2026.
+- A página `/artigos-juridicos/`, os 5 artigos e os links "Nossos artigos" (cabeçalho) e "Artigos" (rodapé) foram removidos em 13/10/2026. O texto de direitos autorais do rodapé passou a ser "© 2026 Silva & Cardoso Advogados e Associados. Todos os direitos reservados."
 - Fundos das seções (`bg-predios`, `bg-biblioteca`, `bg-balanca`) e a foto do "Contato Rápido" (`escritorio-fachada-noite.webp`) foram trocados em 13/10/2026 por fotos semelhantes em domínio público (CC0, rawpixel). Os botões "Falar com Advogado Especialista" passaram a usar o verde escuro do botão flutuante do WhatsApp (`--color-whatsapp-dark`, #008361).
-- WhatsApp atualizado para (47) 99909-8173 em todos os botões e no `config.js`. Os autores dos artigos continuam iguais ao conteúdo de origem.
+- WhatsApp atualizado para (47) 99909-8173 em todos os botões e no `config.js`.
 - Seção "Nossos Serviços Online": a foto foi trocada por `assets/images/escritorio-interno.webp` (sala de atendimento), com a mesma moldura deslocada das fotos da equipe, em tom escuro. A área da foto passou de 506×360 para 506×420 no desktop, para encaixar melhor uma foto vertical.
 - Seção "Conheça nosso escritório": a foto foi trocada pela fachada do escritório (`assets/images/escritorio-fachada.webp`), com a mesma moldura escura, enquadrada na placa com o nome do escritório.

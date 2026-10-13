@@ -108,8 +108,7 @@
   line-height: 0;
 }
 
-/* ---------- Logotipo: emblema + nome ----------
-   Usado no banner das páginas e no cabeçalho dos artigos. */
+/* ---------- Logotipo: emblema + nome (banner das páginas) ---------- */
 
 .brand-lockup {
   display: flex;
@@ -140,19 +139,6 @@
 
 .brand-lockup--hero .brand-lockup__wordmark {
   width: 600px;
-}
-
-.brand-lockup--header {
-  gap: 20px;
-}
-
-.brand-lockup--header .brand-lockup__emblem {
-  width: 100px;
-  height: 100px;
-}
-
-.brand-lockup--header .brand-lockup__wordmark {
-  width: 300px;
 }
 
 .hero__subtitle {
@@ -691,86 +677,6 @@
   color: var(--color-text);
 }
 
-/* ---------- Cabeçalho das páginas de artigos ---------- */
-
-.site-header {
-  position: relative;
-  z-index: 50;
-  background-color: var(--color-black);
-  color: var(--color-white);
-}
-
-.site-header__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 184px;
-}
-
-.site-header__brand {
-  display: block;
-  margin-left: 106px;
-  text-decoration: none;
-}
-
-.site-header__toggle {
-  display: none;
-}
-
-.site-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 17px;
-  margin-right: 64px;
-  padding-top: 38px;
-}
-
-.site-nav__list {
-  display: flex;
-  gap: 46px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.site-nav__link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 130px;
-  min-height: 50px;
-  padding: 0 8px;
-  border-radius: var(--radius-pill);
-  color: var(--color-white);
-  font-size: var(--font-size-small);
-  text-decoration: none;
-  transition: background-color var(--transition-fast);
-}
-
-.site-nav__link:hover {
-  background-color: var(--button-dark-bg-hover);
-}
-
-.site-nav__cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 198px;
-  min-height: 32px;
-  padding: 4px 16px;
-  border-radius: 16px;
-  background-color: var(--color-whatsapp);
-  color: var(--color-white);
-  font-size: var(--font-size-small);
-  text-decoration: none;
-  transition: background-color var(--transition-fast);
-}
-
-.site-nav__cta:hover {
-  background-color: var(--button-dark-bg-hover);
-}
-
 /* ---------- Rodapé ---------- */
 
 .site-footer {
@@ -843,176 +749,10 @@
 
 .site-footer__copyright {
   grid-column: 2;
-  max-width: 148px;
+  max-width: 420px;
   font-size: 12px;
-  line-height: 1.3;
-}
-
-/* ---------- Lista de artigos ---------- */
-
-.blog-list {
-  padding: 60px 0;
-}
-
-.blog-list__grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 32px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.post-card__cover-link {
-  display: block;
-  margin-bottom: 20px;
-}
-
-.post-card__cover {
-  width: 100%;
-  aspect-ratio: 596 / 358;
-  object-fit: cover;
-}
-
-.post-category {
-  margin-bottom: 16px;
-  font-size: var(--font-size-body);
-  line-height: 1.3;
-  text-transform: uppercase;
-}
-
-.post-card__title {
-  margin-bottom: 12px;
-  font-size: var(--font-size-card-title);
-  font-weight: 700;
-}
-
-.post-card__title a {
-  text-decoration: none;
-}
-
-.post-card__title a:hover {
-  text-decoration: underline;
-}
-
-.post-card__excerpt {
-  margin-bottom: 12px;
-  line-height: 1.3;
-}
-
-.post-meta {
-  line-height: 1.3;
-}
-
-.post-meta__author {
-  margin-bottom: 4px;
-}
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0;
-  margin-top: 4px;
-}
-
-.pagination[hidden] {
-  display: none;
-}
-
-.pagination__button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  padding: 0;
-  border: 0;
-  background: none;
-  color: var(--color-black);
-  font-size: 12px;
-  cursor: pointer;
-}
-
-.pagination__button[aria-current="page"] {
-  color: var(--color-pagination-active);
-  font-weight: 500;
-}
-
-.pagination__button:disabled {
-  opacity: 0.35;
-  cursor: default;
-}
-
-.pagination__button svg {
-  width: 9px;
-  height: 15px;
-}
-
-/* ---------- Página de artigo ---------- */
-
-.post-header {
-  max-width: var(--article-header-width);
-  margin-inline: auto;
-  padding: 45px 30px;
   text-align: center;
-}
-
-.post-header__title {
-  margin-bottom: 12px;
-  font-size: 32px;
-  font-weight: 700;
-}
-
-.post-header__description {
-  margin-bottom: 12px;
   line-height: 1.3;
-}
-
-.post-body {
-  max-width: calc(var(--article-width) + (var(--page-gutter) * 2));
-  margin-inline: auto;
-  padding: 56px var(--page-gutter) 96px;
-}
-
-.post-body__cover {
-  width: 100%;
-  aspect-ratio: 812 / 344;
-  margin-bottom: 42px;
-  object-fit: cover;
-}
-
-.post-content h2 {
-  margin: 56px 0 40px;
-  font-size: var(--font-size-article-heading);
-  font-weight: 600;
-}
-
-.post-content h2:first-child {
-  margin-top: 0;
-}
-
-.post-content p {
-  margin-bottom: 32px;
-}
-
-.post-content ul,
-.post-content ol {
-  margin-bottom: 32px;
-  padding-left: 40px;
-}
-
-.post-content li p {
-  margin-bottom: 0;
-}
-
-.post-content li p + p {
-  margin-top: 24px;
-}
-
-.post-content a {
-  color: var(--color-link);
-  overflow-wrap: anywhere;
 }
 
 /* ---------- Botão flutuante do WhatsApp ---------- */

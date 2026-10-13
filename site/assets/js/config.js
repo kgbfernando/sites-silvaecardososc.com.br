@@ -21,5 +21,5 @@ window.SITE_CONFIG = {
     { name: "X (Twitter)", icon: "x.svg", url: "https://x.com/" }
   ],
 
-  copyright: "© 2026. All rights reserved."
+  copyright: "© 2026 Silva & Cardoso Advogados e Associados. Todos os direitos reservados."
 };

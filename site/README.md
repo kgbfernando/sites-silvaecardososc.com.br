@@ -19,7 +19,6 @@ A lista de páginas originais, a página local correspondente a cada uma e as li
 ├── justa-causa/index.html
 ├── periculosidade/index.html
 ├── rescisao-indireta/index.html
-├── <slug-do-artigo>/index.html       ← um artigo por pasta (5 artigos)
 ├── 404.html                          ← página de "não encontrado"
 ├── robots.txt
 ├── sitemap.xml
@@ -28,16 +27,14 @@ A lista de páginas originais, a página local correspondente a cada uma e as li
 │   │   ├── variables.css   ← cores, fontes, larguras, bordas (comece por aqui)
 │   │   ├── base.css        ← fontes locais, reset, estilos de elementos
 │   │   ├── layout.css      ← contêiner, seções, imagens de fundo
-│   │   ├── components.css  ← botões, banner, equipe, formulários, rodapé, artigos…
+│   │   ├── components.css  ← botões, banner, equipe, formulários, rodapé…
 │   │   └── responsive.css  ← ajustes para tablet e celular
 │   ├── js/
 │   │   ├── config.js       ← WhatsApp, redes sociais, endereço de envio dos formulários
-│   │   ├── components.js   ← cabeçalho, rodapé e botão do WhatsApp compartilhados
-│   │   ├── navigation.js   ← menu móvel
+│   │   ├── components.js   ← rodapé e botão do WhatsApp compartilhados
 │   │   ├── forms.js        ← validação e envio dos formulários
-│   │   └── main.js         ← animações ao rolar, paginação dos artigos
+│   │   └── main.js         ← animações ao rolar
 │   ├── images/             ← fotos, logotipo, fundos, imagem de compartilhamento
-│   │   └── artigos/        ← capas dos artigos
 │   ├── icons/              ← favicons e ícones SVG (WhatsApp, redes sociais)
 │   └── fonts/              ← Roboto e Montserrat (arquivos .woff2)
 ├── tests/                  ← testes automatizados (opcional, só para desenvolvimento)
@@ -51,13 +48,12 @@ Cada página fica em `nome-da-pagina/index.html`. Assim os endereços continuam 
 
 Os links entre páginas são relativos (`../horas-extras/`), então o site também funciona se for publicado em uma subpasta.
 
-### Cabeçalho e rodapé sem repetição
+### Rodapé sem repetição
 
-HTML puro não tem "include". Para não copiar o mesmo rodapé em 15 arquivos, três partes comuns são definidas **uma única vez** em `assets/js/components.js` e inseridas pelas tags:
+HTML puro não tem "include". Para não copiar o mesmo rodapé em todos os arquivos, duas partes comuns são definidas **uma única vez** em `assets/js/components.js` e inseridas pelas tags:
 
 | Tag no HTML | O que aparece | Onde é usada |
 | --- | --- | --- |
-| `<site-header current="artigos"></site-header>` | cabeçalho preto com logotipo e menu | lista de artigos e artigos |
 | `<site-footer></site-footer>` | rodapé completo | todas as páginas |
 | `<whatsapp-button></whatsapp-button>` | botão flutuante do WhatsApp | todas as páginas |
 
@@ -100,10 +96,9 @@ Abra o arquivo `index.html` da página desejada e altere o texto entre as tags. 
 ```
 
 - **Títulos da aba e do Google:** `<title>` e `<meta name="description">` no topo de cada arquivo. Os campos `og:` e `twitter:` controlam a prévia em redes sociais e no WhatsApp.
-- **Textos do rodapé, do cabeçalho dos artigos e do botão flutuante:** `assets/js/components.js`.
+- **Textos do rodapé e do botão flutuante:** `assets/js/components.js`.
 - **Número do WhatsApp, mensagem padrão, redes sociais e copyright:** `assets/js/config.js`.
 - **Links de WhatsApp dentro das páginas** (botões verdes "Falar com Advogado Especialista"): estão no próprio HTML, porque cada página tem uma mensagem própria. Para trocar o número em todos, use `Ctrl+Shift+H` e substitua `5547999098173`.
-- **Artigos:** o texto fica dentro de `<div class="post-content">` no `index.html` do artigo. Use `<h2>` para subtítulos, `<p>` para parágrafos e `<ul><li>` para listas.
 
 ---
 
@@ -120,7 +115,6 @@ Abra o arquivo `index.html` da página desejada e altere o texto entre as tags. 
 | Nome em texto (banner, cabeçalho e rodapé) | `assets/images/logo-silva-e-cardoso-advogados.png` |
 | Fundos escuros das seções | `assets/images/bg-predios.webp`, `bg-biblioteca.webp`, `bg-balanca.webp` (definidos em `assets/css/layout.css`); fotos em domínio público (CC0) do rawpixel |
 | Fotos dos advogados | `assets/images/equipe-*.webp` |
-| Capas dos artigos | `assets/images/artigos/*.webp` |
 | Imagem de compartilhamento (redes sociais) | `assets/images/og-image.jpg` (1440×756) |
 | Favicon | `assets/icons/favicon-*.png` e `apple-touch-icon.png` |
 
@@ -150,7 +144,7 @@ Quase tudo está centralizado em **`assets/css/variables.css`**:
 
 ## 6. Como adicionar uma nova página
 
-1. Copie a pasta de uma página parecida (por exemplo `horas-extras/` para uma nova página de área, ou um artigo para um novo artigo) e dê a ela o nome do endereço desejado, em letras minúsculas e com hífens: `direito-de-transito/`.
+1. Copie a pasta de uma página parecida (por exemplo `horas-extras/` para uma nova página de área) e dê a ela o nome do endereço desejado, em letras minúsculas e com hífens: `direito-de-transito/`.
 2. No novo `index.html`, altere `<title>`, `<meta name="description">`, `<link rel="canonical">`, as tags `og:`/`twitter:`, o bloco `application/ld+json` e o conteúdo.
 3. Crie os links para ela nas outras páginas. Exemplo: na página inicial, troque o item sem link
    ```html
@@ -160,8 +154,7 @@ Quase tudo está centralizado em **`assets/css/variables.css`**:
    ```html
    <li data-reveal="scale"><a class="btn btn--dark" href="direito-de-transito/">Direito de Trânsito</a></li>
    ```
-4. A página de lista de artigos (`/artigos-juridicos/`) foi removida a pedido do escritório, junto com os links do menu e do rodapé. Os artigos continuam publicados nos próprios endereços, mas não aparecem mais na navegação.
-5. Adicione o endereço em `sitemap.xml` e na lista `PAGES` de `tests/site.spec.mjs`.
+4. Adicione o endereço em `sitemap.xml` e na lista `PAGES` de `tests/site.spec.mjs`.
 
 Páginas novas na raiz usam caminhos que começam com `../` (`../assets/...`). Páginas em níveis mais profundos precisam de `../../`.
 
@@ -180,7 +173,7 @@ npx playwright install chromium   # apenas na primeira vez
 npm test
 ```
 
-Os testes abrem todas as páginas em desktop e celular e verificam: erros de JavaScript, arquivos faltando (HTTP 404), título/descrição/canonical/H1, imagens quebradas e sem `alt`, rolagem horizontal indevida, links internos e âncoras, menu móvel por teclado, validação e envio do formulário de contato, e a página 404. O relatório detalhado fica disponível com `npm run test:report`.
+Os testes abrem todas as páginas em desktop e celular e verificam: erros de JavaScript, arquivos faltando (HTTP 404), título/descrição/canonical/H1, imagens quebradas e sem `alt`, rolagem horizontal indevida, links internos e âncoras, validação e envio do formulário de contato, e a página 404. O relatório detalhado fica disponível com `npm run test:report`.
 
 A pasta `tests/` não precisa ser publicada (veja a seção 8).
 
@@ -217,4 +210,4 @@ Para receber os formulários por e-mail, crie um formulário em um serviço como
 
 ### Google Tag Manager / Analytics
 
-O site original carregava o Google Tag Manager (`GTM-N2LDKNT8`). Ele não foi incluído para não registrar visitas durante o desenvolvimento. Para reativá-lo, cole o código fornecido pelo Google Tag Manager no `<head>` de cada página (e informe o uso de cookies, conforme a LGPD).
+O site não usa Google Tag Manager nem Google Analytics. Para medir visitas, crie um contêiner na conta Google do escritório e cole o código fornecido no `<head>` de cada página (e informe o uso de cookies, conforme a LGPD).

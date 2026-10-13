@@ -1,11 +1,9 @@
 /*
  * Componentes compartilhados entre as páginas.
  *
- * Para não repetir o mesmo HTML em todas as páginas, o cabeçalho das páginas de
- * artigos, o rodapé e o botão flutuante do WhatsApp são definidos aqui uma
- * única vez e inseridos pelas tags:
+ * Para não repetir o mesmo HTML em todas as páginas, o rodapé e o botão
+ * flutuante do WhatsApp são definidos aqui uma única vez e inseridos pelas tags:
  *
- *   <site-header current="artigos"></site-header>
  *   <site-footer></site-footer>
  *   <whatsapp-button></whatsapp-button>
  *
@@ -39,38 +37,6 @@
   }
 
   window.SiteLinks = { pageUrl: pageUrl, assetUrl: assetUrl, whatsappUrl: whatsappUrl };
-
-  class SiteHeader extends HTMLElement {
-    connectedCallback() {
-      var current = this.getAttribute("current");
-      var currentAttr = function (name) {
-        return current === name ? ' aria-current="page"' : "";
-      };
-
-      this.innerHTML =
-        '<header class="site-header">' +
-        '  <div class="container site-header__inner">' +
-        '    <a class="site-header__brand" href="' + pageUrl("") + '">' +
-        '      <span class="brand-lockup brand-lockup--header">' +
-        '        <img class="brand-lockup__emblem" src="' + assetUrl("images/logo-emblema.webp") + '" width="480" height="480" alt="">' +
-        '        <img class="brand-lockup__wordmark" src="' + assetUrl("images/logo-silva-e-cardoso-advogados.png") + '" width="1259" height="184" alt="Silva e Cardoso Advogados e Associados — página inicial">' +
-        "      </span>" +
-        "    </a>" +
-        '    <button class="site-header__toggle" type="button" aria-expanded="false" aria-controls="site-nav">' +
-        '      <span class="site-header__toggle-icon" aria-hidden="true"></span>' +
-        '      <span class="visually-hidden">Abrir menu</span>' +
-        "    </button>" +
-        '    <nav class="site-nav" id="site-nav" aria-label="Menu principal">' +
-        '      <ul class="site-nav__list">' +
-        '        <li><a class="site-nav__link" href="' + pageUrl("") + '"' + currentAttr("inicio") + ">Início</a></li>" +
-        '        <li><a class="site-nav__link" href="' + pageUrl("") + '#areas-de-atuacao">Áreas de atuação</a></li>' +
-        "      </ul>" +
-        '      <a class="site-nav__cta" href="' + whatsappUrl() + '" target="_blank" rel="noopener">Entre em contato</a>' +
-        "    </nav>" +
-        "  </div>" +
-        "</header>";
-    }
-  }
 
   class SiteFooter extends HTMLElement {
     connectedCallback() {
@@ -124,7 +90,6 @@
     }
   }
 
-  customElements.define("site-header", SiteHeader);
   customElements.define("site-footer", SiteFooter);
   customElements.define("whatsapp-button", WhatsappButton);
 })();

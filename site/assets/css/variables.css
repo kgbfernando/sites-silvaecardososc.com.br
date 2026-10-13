@@ -16,7 +16,6 @@
   --color-input-border: #b8c0cc;
   --color-focus: #25d366;
   --color-link: #1d4ed8;
-  --color-pagination-active: #673de6;
   --color-star: #fbbc04;
 
   /* WhatsApp */
@@ -39,7 +38,6 @@
   --font-size-h1: 48px;
   --font-size-section-title: 48px;
   --font-size-team-name: 40px;
-  --font-size-article-heading: 26px;
   --font-size-card-title: 24px;
   --font-size-faq-question: 20px;
   --font-size-item-title: 18px;
@@ -49,8 +47,6 @@
 
   /* Larguras */
   --content-width: 1224px;
-  --article-width: 812px;
-  --article-header-width: 954px;
   --text-narrow-width: 606px;
   --page-gutter: 16px;
 

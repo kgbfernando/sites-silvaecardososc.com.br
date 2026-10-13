@@ -75,15 +75,8 @@
   display: block;
 }
 
-/* Componentes inseridos por assets/js/components.js.
-   A altura mínima evita que o conteúdo "pule" enquanto o cabeçalho é montado. */
-site-header,
+/* Componentes inseridos por assets/js/components.js */
 site-footer,
 whatsapp-button {
   display: block;
-}
-
-site-header {
-  min-height: 184px;
-  background-color: var(--color-black);
 }
