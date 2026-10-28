@@ -150,6 +150,29 @@
     font-size: 12px;
   }
 
+  .area-card__text {
+    font-size: 12px;
+  }
+
+  .hero__heading {
+    font-size: 32px;
+  }
+
+  .hero__lead {
+    font-size: var(--font-size-small);
+  }
+
+  /* No celular a foto ocupa o banner inteiro, com película mais escura */
+  .hero--familia {
+    --overlay-opacity: 0.8;
+  }
+
+  .section--bg-familia {
+    background-image: url("../images/bg-familia.webp");
+    background-position: right center;
+    background-size: cover;
+  }
+
   .areas__cta {
     margin-top: 46px;
   }

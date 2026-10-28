@@ -12,6 +12,7 @@ A lista de páginas originais, a página local correspondente a cada uma e as li
 /
 ├── index.html                        ← página inicial
 ├── direito-do-trabalho/index.html    ← páginas de área (uma pasta por página)
+├── direito-de-familia/index.html
 ├── acidente-de-trabalho/index.html
 ├── estabilidade/index.html
 ├── horas-extras/index.html

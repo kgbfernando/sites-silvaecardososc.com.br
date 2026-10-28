@@ -5,6 +5,7 @@ import { expect, test } from "@playwright/test";
 const PAGES = [
   "/",
   "/direito-do-trabalho/",
+  "/direito-de-familia/",
   "/acidente-de-trabalho/",
   "/estabilidade/",
   "/horas-extras/",

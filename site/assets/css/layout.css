@@ -53,6 +53,16 @@
   background-image: url("../images/bg-balanca.webp");
 }
 
+/* Fundo escuro com a foto da família à direita (página de Direito de Família) */
+.section--bg-familia {
+  background-image:
+    linear-gradient(90deg, rgb(var(--overlay-rgb)) calc(100% - 400px), rgba(var(--overlay-rgb), 0) calc(100% - 160px)),
+    url("../images/bg-familia.webp");
+  background-position: center, right center;
+  background-repeat: no-repeat;
+  background-size: cover, 400px auto;
+}
+
 /* Imagem de fundo fixa (efeito parallax) — desativada em telas de toque */
 .section--fixed-bg {
   background-attachment: fixed;
